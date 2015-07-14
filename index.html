@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS User Registration and Login Example</title>
+    <link rel="stylesheet"
+          href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script
+            src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+    <script
+            src="ui-bootstrap-tpls-0.9.0.min.js"></script>
+    <script
+            src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+    <script
+            src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-resource.js"></script>
+   <!-- <script src="spa_restful.js"></script>-->
+    <link rel="stylesheet"
+          href="css1.css">
+    <link href="app-content/app.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <a class="navbar-brand" href="#">BRAND</a>
+    <div class="navbar-collapse collapse">
+
+
+        <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown">
+                <a role="button" class="dropdown-toggle">
+                    Menu <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/angularjs-interview-questions-set-1">INSURANCE</a></li>
+                    <li><a href="/angularjs-interview-questions-set-2">CLAIMS</a></li>
+                    <li><a href="/angularjs-interview-questions-set-2">YOUR POLICY</a></li>
+                    <li><a href="/angularjs-interview-questions-set-2">ABOUT</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">CLAIMS</a></li>
+            <li><a href="#/login">LOGIN</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+        <div class="container">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+                <div ng-view></div>
+            </div>
+        </div>
+
+
+
+
+
+    <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
+
+    <script src="app.js"></script>
+    <script src="app-services/authentication.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+
+    <!-- Real user service that uses an api -->
+    <!-- <script src="app-services/user.service.js"></script> -->
+
+    <!-- Fake user service for demo that uses local storage -->
+    <script src="app-services/user.service.local-storage.js"></script>
+
+    <script src="home/home.controller.js"></script>
+    <script src="login/login.controller.js"></script>
+    <script src="register/register.controller.js"></script>
+</body>
+</html>
