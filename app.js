@@ -27,6 +27,12 @@
                 controllerAs: 'vm'
             })
 
+            .when('/quote', {
+                controller: 'quoteController',
+                templateUrl: 'quote/quote.view.html',
+                controllerAs: 'vm'
+            })
+
             .otherwise({ redirectTo: '/login' });
     }
 

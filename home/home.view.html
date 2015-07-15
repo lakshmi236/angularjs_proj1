@@ -1,11 +1,71 @@
-﻿<h1>Hi {{vm.user.firstName}}!</h1>
-<p>You're logged in!!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li ng-repeat="user in vm.allUsers">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a href="#" ng-click="vm.deleteUser(user.id)">Delete</a>
-    </li>
-</ul>
-<p>&nbsp;</p>
-<p><a href="#/login" class="btn btn-primary">Logout</a></p>
+﻿<div class="col-sm-12 ">
+    <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+   <div ng-show="vm.isuser">
+    <div class="col-xs-12">
+       <div class="col-xs-6">
+           <h4>Welcome {{vm.user.firstName}}!</h4>
+       </div>
+       <div class="col-xs-6">
+           <a href="#/login" class="btn btn-primary" style="float:right">Logout </a>
+       </div>
+   </div>
+   </div>
+    <br>
+    <!--
+    <p>You're logged in!!</p>
+    <h3>All registered users:</h3>
+    <ul>
+        <li ng-repeat="user in vm.allUsers">
+            {{user.username}} ({{user.firstName}} {{user.lastName}})
+            - <a href="#" ng-click="vm.deleteUser(user.id)">Delete</a>
+        </li>
+    </ul>
+    <p>&nbsp;</p>
+
+    -->
+
+
+    <div class="container"  style="
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 30px;
+    ">
+        <div class="row" id="bg">
+
+
+            <div class="col-xs-12" >
+                <div class="col-xs-6">
+                </div>
+                <div class="col-xs-6">
+                    <h1>Welcome!</h1>
+                    <p>You could save over $548*</p>
+                    <div class="zipcode">
+                        <input type="text" PlaceHolder="Zip Code" pattern="\d{5,5}(-\d{4,4})?" id="zipcode" name="zipcode" ng-model="zipcode">
+
+
+                        <select class="dropdown">
+                            <option>Auto</option>
+                            <option>home</option>
+                            <option>Renters</option>
+                            <option>condo</option>
+                            <option>ownhouse</option>
+                            <option>ATV</option>
+                            <option>Car</option>
+
+                        </select>
+                    </div>
+
+                    <p>Save up to 10% extra--add property to your auto quote</p>
+                    <input type="button" value="+Home"/>
+                    <input type="button" value="+Renters"/>
+                    <input type="button" value="+Condo"/><br><br>
+                    <a href="#/quote"><input type="button" class="btn btn-info" value="Get a Quote"/></a>
+                    <!--<div class="col-lg-1"></div>-->
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+</div>

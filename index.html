@@ -14,8 +14,7 @@
     <script
             src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-resource.js"></script>
    <!-- <script src="spa_restful.js"></script>-->
-    <link rel="stylesheet"
-          href="css1.css">
+    <link rel="stylesheet" href="css1.css">
     <link href="app-content/app.css" rel="stylesheet" />
 </head>
 <body>
@@ -38,10 +37,10 @@
                     Menu <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/angularjs-interview-questions-set-1">INSURANCE</a></li>
+                    <li><a href="#/quote">GET QUOTE</a></li>
                     <li><a href="/angularjs-interview-questions-set-2">CLAIMS</a></li>
                     <li><a href="/angularjs-interview-questions-set-2">YOUR POLICY</a></li>
-                    <li><a href="/angularjs-interview-questions-set-2">ABOUT</a></li>
+                    <li><a href="/asdf">ABOUT</a></li>
                 </ul>
             </li>
         </ul>
@@ -56,8 +55,7 @@
 
 
         <div class="container">
-            <div class="col-sm-8 col-sm-offset-2">
-                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+
                 <div ng-view></div>
             </div>
         </div>
@@ -81,5 +79,7 @@
     <script src="home/home.controller.js"></script>
     <script src="login/login.controller.js"></script>
     <script src="register/register.controller.js"></script>
+    <script src="quote/quote.controller.js"></script>
+
 </body>
 </html>

@@ -84,3 +84,13 @@
     display: block;
     margin-top: 10px;
 }
+
+#bg{
+    background:url('../images/prog_bkground_img.jpg') no-repeat center center;
+
+    /*   background-size:100% au*/
+    min-height: 350px;
+    max-height: 563px;
+    width: 100%;
+    background-size: 1570px auto;
+}

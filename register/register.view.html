@@ -1,4 +1,6 @@
-﻿
+﻿<div class="col-sm-8 col-sm-offset-2">
+    <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+
 <div class="container">
     <div ng-show="vm.error" class="alert alert-danger">{{vm.error}}</div>
     <div class="row">
@@ -11,7 +13,7 @@
                       ng-submit="vm.register()">
 
                     <div class="form-group" ng-class="{ 'has-error': form.firstName.$dirty && form.firstName.$error.required }">
-                    <input type="text" class="form-control"  name="firstName" id="firstName" ng-model="vm.user.firstName" placeholder="First Name" required autofocus>
+                    <input type="text" class="form-control"  name="firstName" id="firstName" ng-model="vm.user.firstName" placeholder="First Name" pattern="[a-zA-Z]{2,64}" required autofocus>
                     <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">First name is required</span>
                     </div>
 
@@ -44,4 +46,5 @@
             <a href="#/login" class="btn btn-link">Cancel</a>
         </div>
     </div>
+</div>
 </div>
