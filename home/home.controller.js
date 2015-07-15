@@ -5,8 +5,8 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['UserService', '$rootScope'];
-    function HomeController(UserService, $rootScope) {
+    HomeController.$inject = ['UserService', '$rootScope' ,'$http' ];
+    function HomeController(UserService, $rootScope ,$http) {
        // alert("home controller");
         var vm = this;
 
@@ -15,7 +15,7 @@
         vm.deleteUser = deleteUser;
         vm.isuser=false;
         initController();
-
+        vm.getQuote = getQuote;
         function initController() {
             loadCurrentUser();
             loadAllUsers();
@@ -32,6 +32,20 @@
             }
         }
 
+
+        function getQuote() {
+
+               alert(vm.zipcode);
+
+
+            $http.get("https://www.zipcodeapi.com/rest/xLuMT8yWjs7w0ecQqv58Ld5mU2YTmycUjHHdPf98IhEIwQyWmE47RauMdsGz1Tuk/info.json/95050/degrees")
+                .success(function(response) {
+                    alert(response);
+                   //$scope.names = response.records;
+                });
+
+        }
+
         function loadAllUsers() {
             UserService.GetAll()
                 .then(function (users) {
@@ -45,6 +59,8 @@
                 loadAllUsers();
             });
         }
+
+
     }
 
 })();
