@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
 <div ng-show="vm.error" class="alert alert-danger">{{vm.error}}</div>
 <div class="row">
     <div class="col-sm-6 col-md-4 col-md-offset-2">
@@ -25,4 +25,185 @@
         <a href="#/register" class="text-center new-account">Create an account </a>
     </div>
 </div>
+</div>-->
+
+
+
+<div class="bs-example">
+    <form name="form" role="form" ng-submit="vm.login()">
+        <div class="row">
+            <div class="col-xs-2">
+                <input type="text" class="form-control" name="firstName" id="firstName" ng-model="vm.firstName" placeholder="User Name" required autofocus>
+                <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">Username is required</span
+            </div>
+            <div class="col-xs-4">
+                <input type="text" class="form-control">
+            </div>
+            <div class="col-xs-5">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3">
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="col-xs-4">
+                <textarea class="form-control"></textarea>
+            </div>
+            <div class="col-xs-5">
+                <textarea class="form-control"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-3">
+                <select class="form-control">
+                    <option>Select</option>
+                </select>
+            </div>
+            <div class="col-xs-4">
+                <select class="form-control">
+                    <option>Select</option>
+                </select>
+            </div>
+            <div class="col-xs-5">
+                <select class="form-control">
+                    <option>Select</option>
+                </select>
+            </div>
+        </div>
+    </form>
 </div>
+
+
+<form action="/NameAndAddress/Edit" autocomplete="off" class="questions" method="post" novalidate="novalidate">
+
+    <input type="submit" style="visibility:hidden; position:absolute;"/>
+
+
+    <div class="question first-name" id="NameAndAddressFormModel_FirstName_Div">
+        <div class="placeholder-override control">
+            <div class="input-padding"></div>
+            <label unselectable="on">First Name</label><input
+                class="textbox accept-alpha-numeric-with-special-characters" type="text" data-exception="-"
+                autocorrect="off" value="" data-original-value="" maxlength="11"
+                id="NameAndAddressFormModel_FirstName_Value" name="NameAndAddressFormModel.FirstName.Value"/></div>
+    </div>
+    <div class="question middle-initial" id="NameAndAddressFormModel_MiddleInitial_Div">
+        <div class="placeholder-override control">
+            <div class="input-padding"></div>
+            <label unselectable="on">MI</label><input class="textbox accept-alpha" type="text" value=""
+                                                      data-original-value="" maxlength="11"
+                                                      id="NameAndAddressFormModel_MiddleInitial_Value"
+                                                      name="NameAndAddressFormModel.MiddleInitial.Value"/></div>
+    </div>
+    <div class="question last-name" id="NameAndAddressFormModel_LastName_Div">
+        <div class="placeholder-override control">
+            <div class="input-padding"></div>
+            <label unselectable="on">Last Name</label><input class="textbox accept-alpha-with-special-characters"
+                                                             type="text" data-exception="\'-" autocorrect="off" value=""
+                                                             data-original-value="" maxlength="13"
+                                                             id="NameAndAddressFormModel_LastName_Value"
+                                                             name="NameAndAddressFormModel.LastName.Value"/></div>
+    </div>
+    <div class="question suffix" id="NameAndAddressFormModel_Suffix_Div">
+        <div class="dropdown control">
+            <div class="display">
+                <div class="current-value" placeholder="Suffix"></div>
+                <div class="arrow-background">
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <select data-original-value="N" id="NameAndAddressFormModel_Suffix_Value"
+                    name="NameAndAddressFormModel.Suffix.Value">
+                <option value="N" selected="selected"></option>
+                <option value="SR">Sr</option>
+                <option value="JR">Jr</option>
+                <option value="I">I</option>
+                <option value="II">II</option>
+            </select></div>
+    </div>
+
+    <div class="divider-small"></div>
+    <div class="question mailing-address" id="NameAndAddressFormModel_MailingAddress_Div">
+        <div class="placeholder-override control">
+            <div class="input-padding"></div>
+            <label unselectable="on">Mailing Address</label><input
+                class="textbox accept-alpha-numeric-with-special-characters" type="text" data-exception="@#/.-\'"
+                autocorrect="off" value="" data-original-value="" maxlength="25"
+                id="NameAndAddressFormModel_MailingAddress_Value" name="NameAndAddressFormModel.MailingAddress.Value"/>
+        </div>
+    </div>
+    <div class="question apartment-number" id="NameAndAddressFormModel_ApartmentUnit_Div">
+        <div class="placeholder-override control">
+            <div class="input-padding"></div>
+            <label unselectable="on">Apt./Unit #</label><input
+                class="textbox accept-alpha-numeric-with-special-characters" type="text" data-exception=".-\'/"
+                autocorrect="off" value="" data-original-value="" maxlength="8"
+                id="NameAndAddressFormModel_ApartmentUnit_Value" name="NameAndAddressFormModel.ApartmentUnit.Value"/>
+        </div>
+    </div>
+    <div class="question city" id="NameAndAddressFormModel_City_Div">
+        <div class="placeholder-override control">
+            <div class="input-padding"></div>
+            <label unselectable="on">City</label><input class="textbox accept-alpha-with-special-characters" type="text"
+                                                        data-exception="-\'" autocorrect="off" value=""
+                                                        data-original-value="" maxlength="15"
+                                                        id="NameAndAddressFormModel_City_Value"
+                                                        name="NameAndAddressFormModel.City.Value"/></div>
+    </div>
+    <span class="state-text">, CA</span>
+
+    <div class="question zip-code" id="NameAndAddressFormModel_ZipCode_Div">
+        <div class="placeholder-override control">
+            <div class="input-padding"></div>
+            <label unselectable="on">ZIP Code</label><input class="textbox accept-numbers-only" type="tel" value="95050"
+                                                            data-original-value="95050" maxlength="5"
+                                                            id="NameAndAddressFormModel_ZipCode_Value"
+                                                            name="NameAndAddressFormModel.ZipCode.Value"/></div>
+    </div>
+    <div class="question zip-type" id="NameAndAddressFormModel_MailingZipType_Div">
+        <div class="checkbox control">
+            <div class="display">
+                <div class="mark"></div>
+            </div>
+            <input value="P" type="checkbox" class="no-tab-stop" id="NameAndAddressFormModel_MailingZipType_Value"
+                   name="NameAndAddressFormModel.MailingZipType.Value"/><input value="O" type="hidden"
+                                                                               name="NameAndAddressFormModel.MailingZipType.Value"/>
+        </div>
+        <label for="NameAndAddressFormModel_MailingZipType_Value" id="NameAndAddressFormModel_MailingZipType_Label"
+               name="NameAndAddressFormModel.MailingZipType.Label">P.O. Box/Military Address</label></div>
+
+    <div class="divider-small"></div>
+
+    <div class="question date-of-birth" id="NameAndAddressFormModel_DateOfBirth_Div"><label
+            id="NameAndAddressFormModel_DateOfBirth_Label" name="NameAndAddressFormModel.DateOfBirth.Label"
+            for="NameAndAddressFormModel_DateOfBirth_Month">Date of Birth</label>
+
+        <div class="control">
+            <div class="placeholder-override date-box"><label>MM</label><input class="date-input month-input textbox"
+                                                                               type="tel" maxlength="2" value=""
+                                                                               data-original-value=""
+                                                                               id="NameAndAddressFormModel_DateOfBirth_Month"
+                                                                               name="NameAndAddressFormModel.DateOfBirth.Month"
+                                                                               data-should-auto-tab="true"/></div>
+            <span class="date-divider">/</span>
+
+            <div class="placeholder-override date-box"><label>DD</label><input class="date-input day-input textbox"
+                                                                               type="tel" maxlength="2" value=""
+                                                                               data-original-value=""
+                                                                               id="NameAndAddressFormModel_DateOfBirth_Day"
+                                                                               name="NameAndAddressFormModel.DateOfBirth.Day"
+                                                                               data-should-auto-tab="true"/></div>
+            <span class="date-divider">/</span>
+
+            <div class="placeholder-override date-box"><label>YYYY</label><input class="date-input year-input textbox"
+                                                                                 type="tel" maxlength="4" value=""
+                                                                                 data-original-value=""
+                                                                                 id="NameAndAddressFormModel_DateOfBirth_Year"
+                                                                                 name="NameAndAddressFormModel.DateOfBirth.Year"
+                                                                                 data-autocomplete-prefix="19"/></div>
+        </div>
+    </div>
+    <input id="Identifier" name="Identifier" type="hidden" value=""/></form>

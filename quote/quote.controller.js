@@ -5,13 +5,15 @@
         .module('app')
         .controller('quoteController', quoteController);
 
-    quoteController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
-    function quoteController($location, AuthenticationService, FlashService) {
+    quoteController.$inject = ['$location', 'AuthenticationService', 'FlashService','$routeParams'];
+    function quoteController($location, AuthenticationService, FlashService, $routeParams) {
         // alert("login controller");
         var vm = this;
 
         vm.login = login;
-
+        alert("hi");
+        alert($routeParams.state+"  state");
+        alert($routeParams.zip+"  zip");
         (function initController() {
             // reset login status
             AuthenticationService.ClearCredentials();

@@ -5,8 +5,8 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['UserService', '$rootScope' ,'$http' ];
-    function HomeController(UserService, $rootScope ,$http) {
+    HomeController.$inject = ['$location', 'UserService', '$rootScope' ,'$http' ];
+    function HomeController($location, UserService, $rootScope ,$http) {
        // alert("home controller");
         var vm = this;
 
@@ -16,6 +16,7 @@
         vm.isuser=false;
         initController();
         vm.getQuote = getQuote;
+        vm.state=null;
         function initController() {
             loadCurrentUser();
             loadAllUsers();
@@ -35,14 +36,20 @@
 
         function getQuote() {
 
-               alert(vm.zipcode);
+               var url="http://ZiptasticAPI.com/"+vm.zipcode+"?callback=JSON_CALLBACK";
 
-
-            $http.get("https://www.zipcodeapi.com/rest/xLuMT8yWjs7w0ecQqv58Ld5mU2YTmycUjHHdPf98IhEIwQyWmE47RauMdsGz1Tuk/info.json/95050/degrees")
-                .success(function(response) {
-                    alert(response);
-                   //$scope.names = response.records;
+            $http.jsonp(url).
+                success(function(data) {
+                    $rootScope.data = data;
+                   vm.state=data.state;
+                    alert(vm.state);
+                    $location.path('/quote/'+vm.state+'/'+vm.zipcode);
+                }).
+                error(function (data) {
+                    $rootScope.data = "Request failed";
                 });
+
+
 
         }
 

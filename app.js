@@ -27,7 +27,7 @@
                 controllerAs: 'vm'
             })
 
-            .when('/quote', {
+            .when('/quote/:state/:zip', {
                 controller: 'quoteController',
                 templateUrl: 'quote/quote.view.html',
                 controllerAs: 'vm'
