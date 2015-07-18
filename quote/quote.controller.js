@@ -11,9 +11,9 @@
         var vm = this;
 
         vm.login = login;
-        alert("hi");
-        alert($routeParams.state+"  state");
-        alert($routeParams.zip+"  zip");
+        vm.state=$routeParams.state;
+        vm.zip=$routeParams.zip;
+
         (function initController() {
             // reset login status
             AuthenticationService.ClearCredentials();
