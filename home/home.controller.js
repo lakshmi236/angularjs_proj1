@@ -9,7 +9,7 @@
     function HomeController($location, UserService, $rootScope ,$http) {
        // alert("home controller");
         var vm = this;
-
+        vm.isHeader=true;
         vm.user = null;
         vm.allUsers = [];
         vm.deleteUser = deleteUser;
@@ -17,6 +17,8 @@
         initController();
         vm.getQuote = getQuote;
         vm.state=null;
+
+
         function initController() {
             loadCurrentUser();
             loadAllUsers();

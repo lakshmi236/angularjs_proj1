@@ -11,7 +11,7 @@
         var vm = this;
 
         vm.login = login;
-
+        vm.isHeader = true;
         (function initController() {
             // reset login status
             AuthenticationService.ClearCredentials();

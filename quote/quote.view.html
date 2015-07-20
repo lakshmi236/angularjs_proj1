@@ -29,73 +29,197 @@
 
 
 
-<div class="bs-example">
-    <form name="form" role="form" ng-submit="vm.login()">
-        <div class="row">
-            <div class="col-xs-3">
-                <input type="text" class="form-control" name="firstName" id="firstName" ng-model="vm.firstName" placeholder="First Name" required autofocus>
-                <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">Username is required</span>
-            </div>
-            <div class="col-xs-2">
-                <input type="text" class="form-control" name="mi" id="mi" ng-model="vm.mi" placeholder="MI" required>
-                <span ng-show="form.mi.$dirty && form.mi.$error.required" class="help-block">MI is required</span>
-
-            </div>
-            <div class="col-xs-3">
-                <input type="text" class="form-control" name="lastName" id="lastName" ng-model="vm.lastName" placeholder="Last Name" required>
-                <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last Name is required</span>
-            </div>
-            <div class="col-xs-4">
-
-                <select class="form-control" name="suffix" id="suffix" ng-model="vm.suffix">
-                    <option value="" disabled selected>suffix</option>
-                    <option value="SR">Sr</option>
-                    <option value="JR">Jr</option>
-                    <option value="I">I</option>
-                    <option value="II">II</option>
-                </select>
-
-
-             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6">
-                <input type="text" class="form-control" name="mailingAddress" id="mailingAddress" ng-model="vm.mailingAddress" placeholder="Mailing Address" required >
-                <span ng-show="form.mailingAddress.$dirty && form.mailingAddress.$error.required" class="help-block">Mailing Address is required</span>
-            </div>
-            <div class="col-xs-6">
-                <input type="text" class="form-control" name="aptNo" id="aptNo" ng-model="vm.aptNo" placeholder="Apt./unit #" required>
-                <span ng-show="form.aptNo.$dirty && form.aptNo.$error.required" class="help-block">Apt./unit # is required</span>
-
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-xs-4">
-                <input type="text" class="form-control" name="city" id="city" ng-model="vm.city" placeholder="City" required >
-                <span ng-show="form.city.$dirty && form.city.$error.required" class="help-block">City is required</span>
-            </div>
-            <div class="col-xs-4">
-
-             <span> , {{vm.state}}</span>
-
-            </div>
-            <div class="col-xs-4">
-                <input type="text" class="form-control" name="zip" id="zip" ng-model="vm.zip" placeholder="Zip Code" required>
-                <span ng-show="form.zip.$dirty && form.zip.$error.required" class="help-block">Zip code is required</span>
-            </div>
-
-        </div>
 
 
 
-        <div class="checkbox">
-                <label> <input type="checkbox"  name="poBox" id="poBox" ng-model="vm.poBox">P.O. Box/Military Address</label>
 
-            </div>
+<!--<div id="quotebg">-->
+<!--<div class="logo2">-->
+<!--<p>hello</p>-->
+<!--</div>-->
 
-        </form>
+<!--<div class="bs-example">-->
+    <!--<form name="form" role="form" ng-submit="vm.login()">-->
+        <!--<div class="row">-->
+            <!--<div class="col-xs-3">-->
+                <!--<input type="text" class="form-control" name="firstName" id="firstName" ng-model="vm.firstName" placeholder="First Name" required autofocus>-->
+                <!--<span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">Username is required</span>-->
+            <!--</div>-->
+            <!--<div class="col-xs-2">-->
+                <!--<input type="text" class="form-control" name="mi" id="mi" ng-model="vm.mi" placeholder="MI" required>-->
+                <!--<span ng-show="form.mi.$dirty && form.mi.$error.required" class="help-block">MI is required</span>-->
+
+            <!--</div>-->
+            <!--<div class="col-xs-3">-->
+                <!--<input type="text" class="form-control" name="lastName" id="lastName" ng-model="vm.lastName" placeholder="Last Name" required>-->
+                <!--<span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last Name is required</span>-->
+            <!--</div>-->
+            <!--<div class="col-xs-4">-->
+
+                <!--<select class="form-control" name="suffix" id="suffix" ng-model="vm.suffix">-->
+                    <!--<option value="" disabled selected>suffix</option>-->
+                    <!--<option value="SR">Sr</option>-->
+                    <!--<option value="JR">Jr</option>-->
+                    <!--<option value="I">I</option>-->
+                    <!--<option value="II">II</option>-->
+                <!--</select>-->
+
+
+             <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-xs-6">-->
+                <!--<input type="text" class="form-control" name="mailingAddress" id="mailingAddress" ng-model="vm.mailingAddress" placeholder="Mailing Address" required >-->
+                <!--<span ng-show="form.mailingAddress.$dirty && form.mailingAddress.$error.required" class="help-block">Mailing Address is required</span>-->
+            <!--</div>-->
+            <!--<div class="col-xs-6">-->
+                <!--<input type="text" class="form-control" name="aptNo" id="aptNo" ng-model="vm.aptNo" placeholder="Apt./unit #" required>-->
+                <!--<span ng-show="form.aptNo.$dirty && form.aptNo.$error.required" class="help-block">Apt./unit # is required</span>-->
+
+            <!--</div>-->
+
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-xs-4">-->
+                <!--<input type="text" class="form-control" name="city" id="city" ng-model="vm.city" placeholder="City" required >-->
+                <!--<span ng-show="form.city.$dirty && form.city.$error.required" class="help-block">City is required</span>-->
+            <!--</div>-->
+            <!--<div class="col-xs-4">-->
+
+             <!--<span> , {{vm.state}}</span>-->
+
+            <!--</div>-->
+            <!--<div class="col-xs-4">-->
+                <!--<input type="text" class="form-control" name="zip" id="zip" ng-model="vm.zip" placeholder="Zip Code" required>-->
+                <!--<span ng-show="form.zip.$dirty && form.zip.$error.required" class="help-block">Zip code is required</span>-->
+            <!--</div>-->
+
+        <!--</div>-->
+
+
+
+        <!--<div class="checkbox">-->
+                <!--<label> <input type="checkbox"  name="poBox" id="poBox" ng-model="vm.poBox">P.O. Box/Military Address</label>-->
+
+            <!--</div>-->
+
+        <!--</form>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+<div id="quotebg">
+    <div class="logo2">
+
     </div>
+    <div class="row nav2">
+        <ul>
+            <li class="col-xs-1"> </li>
+            <li class="col-xs-2"><a href="#start">Start</a></li>
+            <li class="col-xs-2"><a href="#news">Drivers</a></li>
+            <li class="col-xs-2"><a href="#contact">Vehicles</a></li>
+            <li class="col-xs-2"><a href="#about">Final Detials</a></li>
+            <li class="col-xs-2"><a href="#about">Rates</a></li>
+            <li class="col-xs-1"></li>
+
+        </ul>
+    </div>
+
+
+    <div class="container startform">
+
+        <div class="row">
+            <div class="col-xs-1">
+            </div>
+            <div class="col-xs-6">
+                <div class="bs-example">
+                    <form name="form" role="form" ng-submit="vm.login()">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" name="firstName" id="firstName" ng-model="vm.firstName" placeholder="First Name" required autofocus>
+                                <!-- <span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block">Username is required</span> -->
+                            </div>
+                            <div class="col-xs-1">
+                                <input type="text" class="form-control" name="mi" id="mi" ng-model="vm.mi" placeholder="MI" required>
+                                <!-- <span ng-show="form.mi.$dirty && form.mi.$error.required" class="help-block">MI is required</span> -->
+
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" name="lastName" id="lastName" ng-model="vm.lastName" placeholder="Last Name" required>
+                                <!--  <span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block">Last Name is required</span> -->
+                            </div>
+                            <div class="col-xs-3">
+
+                                <select class="form-control" name="suffix" id="suffix" ng-model="vm.suffix">
+                                    <option value="" disabled selected>suffix</option>
+                                    <option value="SR">Sr</option>
+                                    <option value="JR">Jr</option>
+                                    <option value="I">I</option>
+                                    <option value="II">II</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+                        <div class="row quotefrompadding">
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" name="mailingAddress" id="mailingAddress" ng-model="vm.mailingAddress" placeholder="Mailing Address" required >
+                                <!--  <span ng-show="form.mailingAddress.$dirty && form.mailingAddress.$error.required" class="help-block">Mailing Address is required</span> -->
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" name="aptNo" id="aptNo" ng-model="vm.aptNo" placeholder="Apt./unit #" required>
+                                <!--  <span ng-show="form.aptNo.$dirty && form.aptNo.$error.required" class="help-block">Apt./unit # is required</span> -->
+
+                            </div>
+
+                        </div>
+                        <div class="row quotefrompadding" >
+                            <div class="col-xs-7">
+                                <input type="text" class="form-control" name="city" id="city" ng-model="vm.city" placeholder="City" required >
+                                <!-- <span ng-show="form.city.$dirty && form.city.$error.required" class="help-block">City is required</span> -->
+                            </div>
+                            <div class="col-xs-1">
+
+                                <span> , {{vm.state}}</span>
+
+                            </div>
+                            <div class="col-xs-4">
+                                <input type="text" class="form-control" name="zip" id="zip" ng-model="vm.zip" placeholder="Zip Code" required>
+                                <!-- <span ng-show="form.zip.$dirty && form.zip.$error.required" class="help-block">Zip code is required</span> -->
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="checkbox quotefrompadding">
+                            <label> <input type="checkbox"  name="poBox" id="poBox" ng-model="vm.poBox">P.O. Box/Military Address</label>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">Date of Birth: </div>
+                            <input class="col-xs-1" type="text" class="form-control" name="month" id="month" ng-model="vm.month" placeholder="MM" required><label>/</label>
+                            <input class="col-xs-1" type="text" class="form-control" name="date" id="date" ng-model="vm.date" placeholder="DD" required><label>/</label>
+                            <input class="col-xs-2" type="text" class="form-control" name="year" id="year" ng-model="vm.year" placeholder="YYYY" required>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-xs-5">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
