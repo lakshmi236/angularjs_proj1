@@ -7,9 +7,9 @@
 
     HomeController.$inject = ['$location', 'UserService', '$rootScope' ,'$http' ];
     function HomeController($location, UserService, $rootScope ,$http) {
-       // alert("home controller");
+
         var vm = this;
-        vm.isHeader=true;
+        UserService.isShow=true;
         vm.user = null;
         vm.allUsers = [];
         vm.deleteUser = deleteUser;

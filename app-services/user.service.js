@@ -15,8 +15,14 @@
         service.Create = Create;
         service.Update = Update;
         service.Delete = Delete;
+        service.isShow=isShow;
 
         return service;
+
+        function isShow(){
+            alert("in isshow");
+          return "asdf";
+        }
 
         function GetAll() {
             return $http.get('/api/users').then(handleSuccess, handleError('Error getting all users'));

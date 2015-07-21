@@ -10,7 +10,7 @@
 
        // alert("register Controller");
         var vm = this;
-
+        UserService.isShow=true;
         vm.register = register;
 
         function register() {

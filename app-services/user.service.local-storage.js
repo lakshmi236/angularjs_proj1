@@ -16,6 +16,7 @@
         service.Create = Create;
         service.Update = Update;
         service.Delete = Delete;
+        service.isShow=true;
 
         return service;
 

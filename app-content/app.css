@@ -11,7 +11,7 @@
 }
 
 #bg{
-    background:url('../../images/prog_bkground_img.jpg') no-repeat center center;
+    background:url('/images/prog_bkground_img.jpg') no-repeat center center;
 
     /*   background-size:100% au*/
     min-height: 350px;
@@ -174,7 +174,7 @@
 .form-control{
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 #quotebg {
     background: url('../../images/progimg.jpg') no-repeat center center;

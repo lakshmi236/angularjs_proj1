@@ -5,11 +5,11 @@
         .module('app')
         .controller('LoginController', LoginController);
 
-    LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService'];
-    function LoginController($location, AuthenticationService, FlashService) {
+    LoginController.$inject = ['$location', 'AuthenticationService', 'FlashService','UserService'];
+    function LoginController($location, AuthenticationService, FlashService,UserService) {
       // alert("login controller");
         var vm = this;
-
+        UserService.isShow=true;
         vm.login = login;
         vm.isHeader = true;
         (function initController() {
